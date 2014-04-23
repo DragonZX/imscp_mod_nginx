@@ -1,0 +1,8 @@
+<packages>
+	<nginx>
+		<alternative>
+			<mod_nginx>nginx-full</mod_nginx>
+			<mod_nginx>libapache2-mod-rpaf</mod_nginx>
+		</alternative>
+	</nginx>
+</packages>

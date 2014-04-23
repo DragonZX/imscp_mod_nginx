@@ -1,0 +1,12 @@
+/var/log/nginx/*.log { 
+          daily 
+        missingok 
+        rotate 20 
+        compress 
+        delaycompress 
+        notifempty 
+        create 640 root adm 
+        sharedscripts 
+        postrotate 
+                if [ $(ps ax | grep nginx | grep -v grep | wc -l) = "0" ]; then killall -s HUP nginx; fi 
+        endscript 
